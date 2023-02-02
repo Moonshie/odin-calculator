@@ -51,7 +51,6 @@
 .button-grid button {
     box-sizing: border-box;
     border: 2px solid black;
-    background-color: white;
     width: 87.5px;
     height: 87.5px;
     font-size: 30px;
@@ -63,4 +62,15 @@
 .button-grid-2 #big {
     margin-top: 10px;
     height: 185px;
+}
+.operator {
+    background-color: lightblue;
+}
+.digit {
+    background-color: lightslategray;
+    color: white;
+}
+.clear {
+    background-color: darkblue;
+    color: white;
 }
