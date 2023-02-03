@@ -16,8 +16,25 @@ function operate(x, y, operator) {
 let firstStr = '';
 let secondStr = '';
 let operator = '';
+let current = 'first';
 
 function addDigitToFirst(digit) {firstStr += digit}
 function addDigitToSecond(digit) {secondStr += digit}
-
-console.log(operate(23, 78, '*'));
+function addDigit(digit) {
+    if (current === 'first') {addDigitToFirst(digit); console.log(firstStr)}
+    else if (current === 'second') {addDigitToSecond(digit); console.log(secondStr)}
+}
+function chooseOp(op) {
+    if (current === 'first') {current = 'second'; operator = op; console.log(operator)}
+}
+function equals() {
+    let x = parseInt(firstStr);
+    let y = parseInt(secondStr);
+    console.log(operate(x, y, operator));
+}
+function fullReset() {
+    firstStr = '';
+    secondStr = '';
+    operator = '';
+    current = 'first';
+}
