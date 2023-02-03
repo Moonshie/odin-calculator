@@ -64,10 +64,10 @@ body {
     font-size: 30px;
     padding: 1px;
 }
-.button-grid-1 #zero {
+.button-grid-1 .hbig {
     width: 185px;
 }
-.button-grid-2 #big {
+.button-grid-2 .big {
     margin-top: 10px;
     height: 185px;
 }

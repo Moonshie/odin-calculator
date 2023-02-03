@@ -13,4 +13,11 @@ function operate(x, y, operator) {
     return result;
 }
 
+let firstStr = '';
+let secondStr = '';
+let operator = '';
+
+function addDigitToFirst(digit) {firstStr += digit}
+function addDigitToSecond(digit) {secondStr += digit}
+
 console.log(operate(23, 78, '*'));
