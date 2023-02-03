@@ -18,23 +18,51 @@ let secondStr = '';
 let operator = '';
 let current = 'first';
 
+const displayLine1 = document.querySelector(".line1");
+const displayLine2 = document.querySelector(".line2");
+
 function addDigitToFirst(digit) {firstStr += digit}
 function addDigitToSecond(digit) {secondStr += digit}
 function addDigit(digit) {
-    if (current === 'first') {addDigitToFirst(digit); console.log(firstStr)}
-    else if (current === 'second') {addDigitToSecond(digit); console.log(secondStr)}
+    if (current === 'first') {addDigitToFirst(digit); displayLine2.innerHTML = firstStr}
+    else if (current === 'second' || current === 'extra') {addDigitToSecond(digit); displayLine2.innerHTML = secondStr}
 }
 function chooseOp(op) {
-    if (current === 'first') {current = 'second'; operator = op; console.log(operator)}
+    if (current === 'first') {
+        current = 'second';
+        operator = op;
+        displayLine1.innerHTML += `${firstStr} ${operator}`;
+        displayLine2.innerHTML = ``;
+    } else if (current === 'second') {
+        equals();
+        operator = op;
+        displayLine1.innerHTML = `${firstStr} ${operator}`;
+        displayLine2.innerHTML = ``;
+    } else if (current === 'extra') {
+        operator = op;
+        displayLine1.innerHTML = `${firstStr} ${operator}`;
+        displayLine2.innerHTML = ``;
+        current = 'second';
+    }
 }
 function equals() {
     let x = parseInt(firstStr);
     let y = parseInt(secondStr);
-    console.log(operate(x, y, operator));
+    let result = operate(x, y, operator);
+    displayLine1.innerHTML += ` ${secondStr}`
+    displayLine2.innerHTML = `${result}`;
+    firstStr = ''+result;
+    secondStr = '';
+}
+function equalsHard() {
+    current = 'extra';
+    equals();
 }
 function fullReset() {
     firstStr = '';
     secondStr = '';
     operator = '';
     current = 'first';
+    displayLine1.innerHTML = `&nbsp`;
+    displayLine2.innerHTML = `0`;
 }

@@ -21,6 +21,18 @@ body {
     margin-top: 10px;
     border: 2px solid black;
     box-sizing: border-box;
+    font-family: Helvetica;
+    padding: 5px;
+    padding-right: 10px;
+}
+.display .line1 {
+    text-align: right;
+    font-size: 30px
+}
+.display .line2 {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 50px;
 }
 
 .reset-button-container {

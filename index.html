@@ -10,7 +10,14 @@
 </head>
 <body>
     <div class="container">
-        <div class="display"></div>
+        <div class="display">
+            <div class="line1">
+                &nbsp
+            </div>
+            <div class="line2">
+                0
+            </div>
+        </div>
         <div class="reset-button-container">
             <button class="reset" id="reset" onclick="fullReset()">RESET</button>
         </div>
@@ -45,7 +52,7 @@
                 <div class="column">
                     <button class="operator" id="-" onclick="chooseOp('-')">-</button>
                     <button class="operator big" id="+" onclick="chooseOp('+')">+</button>
-                    <button class="operator big" id="=" onclick="equals()">=</button>
+                    <button class="operator big" id="=" onclick="equalsHard()">=</button>
                 </div>
             </div>
         </div>
