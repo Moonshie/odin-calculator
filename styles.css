@@ -1,15 +1,19 @@
+body {
+    background-color: black;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
     width: 400px;
     height: 700px;
-    border: 2px solid black;
-    background-color: beige;
+    border: 2px solid #D1E8E2;
+    background-color: #2C3531;
 }
 
 .display {
-    background-color: aquamarine;
+    background-color: #D1E8E2;
     width: 380px;
     height: 120px;
     margin-left: auto;
@@ -28,11 +32,15 @@
 .reset {
     box-sizing: border-box;
     border: 2px solid black;
-    background-color: crimson;
+    background-color: rgb(168, 56, 79);
     width: 380px;
     height: 60px;
     font-size: 30px;
-    padding: 1px;   
+    padding: 1px;
+    color: white;
+}
+.reset:hover {
+    background-color: rgb(141, 47, 66);
 }
 
 .button-grid {
@@ -64,13 +72,23 @@
     height: 185px;
 }
 .operator {
-    background-color: lightblue;
+    background-color: #116466;
+    color: white;
+}
+.operator:hover {
+    background-color: #0d4d4e;
 }
 .digit {
-    background-color: lightslategray;
-    color: white;
+    background-color: #FFCB9A;
+    color: black;
+}
+.digit:hover {
+    background-color: #D9B08C;
 }
 .clear {
-    background-color: darkblue;
-    color: white;
+    background-color: #5f85b8;
+    color: black;
+}
+.clear:hover {
+    background-color: #50709b;
 }
